@@ -1,0 +1,11 @@
+---
+
+lookup_options:
+  ccs::ccs_applications:
+    merge:
+      strategy: deep
+      merge_hash_arrays: true
+  ccs::ccs_systemd_units:
+    merge:
+      strategy: deep
+      merge_hash_arrays: true
