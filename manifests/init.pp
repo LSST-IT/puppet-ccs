@@ -37,7 +37,7 @@ class ccs (
   file { '/usr/local/bin/ccssetup' :
     ensure  => file,
     mode    => '0755',
-    content => epp('ccssetup.epp'),
+    content => epp('ccs/ccssetup.epp'),
   }
 
   file { '/etc/profile.d/setup_ccssetup.sh':
