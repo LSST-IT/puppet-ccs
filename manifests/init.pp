@@ -37,7 +37,7 @@ class ccs (
   file { '/usr/local/bin/ccssetup' :
     ensure  => file,
     mode    => '0755',
-    content => epp('profile/ccs/ccssetup.epp'),
+    content => epp('ccssetup.epp'),
   }
 
   file { '/etc/profile.d/setup_ccssetup.sh':
@@ -171,8 +171,8 @@ class ccs (
   }
 
   #$ccs_systemd_units = lookup('ccs_systemd_units')
-    class{'profile::ccs::ccsservice':
-      ccs_systemd_units => $ccs_systemd_units,
-    }
+  class{'ccs::ccsservice':
+    ccs_systemd_units => $ccs_systemd_units,
+  }
 
 }
